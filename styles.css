@@ -1,0 +1,80 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: min-content min-content 1fr;
+    height: 100vh;
+    gap: 20px;
+    margin: 0;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    grid-row: 1 / 4;
+}
+
+
+.top-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: fit-content;
+}
+
+.nav-bar{
+    display: flex;
+    height: fit-content;
+}
+
+.profile-space{
+    display: flex;
+    flex: 1;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+}
+
+.content-space{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.project-space{
+    display: flex;
+    flex-direction: column;
+    grid-row: 1 / 3;
+    gap: 10px;
+}
+
+.project-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 15px;
+}
+
+.announcements-space{
+    display: flex;
+    flex-direction: column;
+}
+
+.announcements-info{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.trending-space{
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 / 3;
+}
+
+.profile{
+    display: flex;
+    gap:20px;
+    flex: 1;
+    align-items: center;
+}
