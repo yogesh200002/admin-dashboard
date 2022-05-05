@@ -5,7 +5,8 @@ body{
     grid-template-rows: min-content min-content 1fr;
     height: 100vh;
     margin: 0;
-    font-family: 'Open Sans', sans-serif;;
+    font-family: 'Open Sans', sans-serif;
+    cursor: auto;
 }
 
 .sidebar{
@@ -34,6 +35,19 @@ li>div{
     display: flex;
     gap:10px;
     align-items: center;
+}
+
+li>div>span::after{
+    display:block;
+    content: '';
+    border-bottom: solid 3px whitesmoke;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out
+}
+
+li>div>span:hover:after{ 
+    transform: scaleX(1); 
+    transform-origin:   0% 50%; 
 }
 
 #list-personal,#list-settings{
@@ -267,6 +281,19 @@ button{
 .profile>div>img{
     height: 50px;
     width: 50px;
+}
+
+.profile>div:nth-child(2)>div:first-child::after{
+    display: block;
+    content: '';
+    border-bottom: solid 3px greenyellow;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out
+}
+
+.profile>div:nth-child(2)>div:first-child:hover::after{
+    transform: scaleX(1);
+    transform-origin: 0% 50%;
 }
 
 .project-space>div:first-child,.trending-space>div:first-child,.announcements-space>div:first-child,#profile-info{
